@@ -6,9 +6,9 @@ Given a string text, return true if it is a palindrome, or false otherwise.
 For this question, letters are NOT case-sensitive, for example, "LEVeL" is a palindrome.
 """
 def is_palindrome(text):
-    # Change here so it works correctly
-
-    return True
+    filtered = [c.lower() for c in text if c.isalpha()]
+    cleaned_text = ''.join(filtered)
+    return cleaned_text == cleaned_text[::-1]
 
 
 if __name__ == '__main__':
